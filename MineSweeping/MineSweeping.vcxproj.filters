@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MainScene.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Block.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MainScene.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Block.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MineSweeping.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\0.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\1.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\2.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\3.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\4.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\5.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\6.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\7.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\8.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\背景.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\标记.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\踩地雷.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\菜单背景.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\初级.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\地雷.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\高级.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\哭脸.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\难度.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\难度菜单.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\难度鼠标移入.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\未探明.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\笑脸.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\笑脸被按下.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\笑脸戴墨镜.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\疑问.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\中级.png">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
