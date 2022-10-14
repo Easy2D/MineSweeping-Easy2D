@@ -33,7 +33,7 @@ MainScene::MainScene()
 
 	// 文字样式
 	Font font = Font(L"黑体", 22);
-	Text::Style style = Text::Style(Color::Black);
+	DrawingStyle style = DrawingStyle(Color::Black);
 
 	// 剩余炸弹数量文字
 	_boomLeftText = gcnew Text(L"雷数 0", font, style);
@@ -324,7 +324,7 @@ void MainScene::changeDifficulty()
 	auto difficultySettingScene = gcnew Scene;
 
 	Font font = Font(L"黑体", 22);
-	Text::Style style = Text::Style(Color::Black);
+	DrawingStyle style = DrawingStyle(Color::Black);
 
 	auto level1 = gcnew Text(L"9x9 布局含 10 颗雷", font, style);
 	auto level2 = gcnew Text(L"16x16 布局含 25 颗雷", font, style);
