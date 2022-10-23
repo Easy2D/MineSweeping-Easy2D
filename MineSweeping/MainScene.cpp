@@ -7,17 +7,17 @@
 MainScene::MainScene()
 {
 	// 背景
-	_background = gcnew Sprite(PNG_BG, L"PNG");
+	_background = gcnew Sprite(PNG_BG, "PNG");
 	_background->movePosY(_menuHeight);
 	addChild(_background);
 
 	// 菜单背景
-	_menuBackground = gcnew Sprite(PNG_MENU_BG, L"PNG");
+	_menuBackground = gcnew Sprite(PNG_MENU_BG, "PNG");
 	addChild(_menuBackground);
 
 	// 笑脸按钮
-	auto smile = gcnew Sprite(PNG_SMILE, L"PNG");
-	auto smileDown = gcnew Sprite(PNG_SMILE_OOPS, L"PNG");
+	auto smile = gcnew Sprite(PNG_SMILE, "PNG");
+	auto smileDown = gcnew Sprite(PNG_SMILE_OOPS, "PNG");
 	smile->setAnchor(0.5f, 0.5f);
 	smileDown->setAnchor(0.5f, 0.5f);
 
@@ -26,22 +26,22 @@ MainScene::MainScene()
 	addChild(_smileBtn);
 
 	// 难度按钮
-	auto difficulty = gcnew Sprite(PNG_DIFFICULTY, L"PNG");
-	auto difficultyMouseOver = gcnew Sprite(PNG_DIFFICULT_MOUSEOVER, L"PNG");
+	auto difficulty = gcnew Sprite(PNG_DIFFICULTY, "PNG");
+	auto difficultyMouseOver = gcnew Sprite(PNG_DIFFICULT_MOUSEOVER, "PNG");
 	auto difficultyButton = gcnew Button(difficulty, difficultyMouseOver, nullptr, std::bind(&MainScene::changeDifficulty, this));
 	addChild(difficultyButton);
 
 	// 文字样式
-	Font font = Font(L"黑体", 22);
+	Font font = Font("黑体", 22);
 	DrawingStyle style = DrawingStyle(Color::Black);
 
 	// 剩余炸弹数量文字
-	_boomLeftText = gcnew Text(L"雷数 0", font, style);
+	_boomLeftText = gcnew Text("雷数 0", font, style);
 	_boomLeftText->setAnchor(0.5f, 0.5f);
 	addChild(_boomLeftText);
 
 	// 计时文字
-	_timePastText = gcnew Text(L"时间 0", font, style);
+	_timePastText = gcnew Text("时间 0", font, style);
 	_timePastText->setAnchor(0.5f, 0.5f);
 	addChild(_timePastText);
 
@@ -69,8 +69,8 @@ void MainScene::startNewGame()
 	_timePastText->setPos(Window::getWidth() / 4 * 3, _buttonHeight / 2 + _menuHeight);
 
 	// 重置笑脸图片
-	auto smile = gcnew Sprite(PNG_SMILE, L"PNG");
-	auto smileDown = gcnew Sprite(PNG_SMILE_OOPS, L"PNG");
+	auto smile = gcnew Sprite(PNG_SMILE, "PNG");
+	auto smileDown = gcnew Sprite(PNG_SMILE_OOPS, "PNG");
 	smile->setAnchor(0.5f, 0.5f);
 	smileDown->setAnchor(0.5f, 0.5f);
 	_smileBtn->setNormal(smile);
@@ -167,7 +167,7 @@ void MainScene::win()
 	endTiming();
 
 	// 笑脸戴墨镜
-	auto smile = gcnew Sprite(PNG_SMILE_WITH_GLASSES, L"PNG");
+	auto smile = gcnew Sprite(PNG_SMILE_WITH_GLASSES, "PNG");
 	smile->setAnchor(0.5f, 0.5f);
 	_smileBtn->setNormal(smile);
 }
@@ -188,7 +188,7 @@ void MainScene::gameover()
 	endTiming();
 
 	// 笑脸换哭脸
-	auto cry = gcnew Sprite(PNG_CRY, L"PNG");
+	auto cry = gcnew Sprite(PNG_CRY, "PNG");
 	cry->setAnchor(0.5f, 0.5f);
 	_smileBtn->setNormal(cry);
 }
@@ -323,12 +323,12 @@ void MainScene::changeDifficulty()
 {
 	auto difficultySettingScene = gcnew Scene;
 
-	Font font = Font(L"黑体", 22);
+	Font font = Font("黑体", 22);
 	DrawingStyle style = DrawingStyle(Color::Black);
 
-	auto level1 = gcnew Text(L"9x9 布局含 10 颗雷", font, style);
-	auto level2 = gcnew Text(L"16x16 布局含 25 颗雷", font, style);
-	auto level3 = gcnew Text(L"16x16 布局含 40 颗雷", font, style);
+	auto level1 = gcnew Text("9x9 布局含 10 颗雷", font, style);
+	auto level2 = gcnew Text("16x16 布局含 25 颗雷", font, style);
+	auto level3 = gcnew Text("16x16 布局含 40 颗雷", font, style);
 
 	auto level1Btn = gcnew Button(level1, [=]()
 		{
@@ -353,7 +353,7 @@ void MainScene::changeDifficulty()
 		});
 
 	// 背景
-	auto background = gcnew Sprite(PNG_BG, L"PNG");
+	auto background = gcnew Sprite(PNG_BG, "PNG");
 	background->setSize(400, 300);
 	difficultySettingScene->addChild(background);
 	difficultySettingScene->addChild(level1Btn);
@@ -413,18 +413,18 @@ void MainScene::setBoomLeftNumber(int leftNum)
 	_boomLeft = leftNum;
 	if (_boomLeft > 0)
 	{
-		_boomLeftText->setText(FormatString(L"雷数 %d", _boomLeft));
+		_boomLeftText->setText(FormatString("雷数 %d", _boomLeft));
 	}
 	else
 	{
-		_boomLeftText->setText(L"雷数 0");
+		_boomLeftText->setText("雷数 0");
 	}
 }
 
 void MainScene::setTimePastSeconds(int seconds)
 {
 	_timePast = seconds;
-	_timePastText->setText(FormatString(L"时间 %d", _timePast));
+	_timePastText->setText(FormatString("时间 %d", _timePast));
 }
 
 void MainScene::onClick(int button)

@@ -16,7 +16,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR szCmdLine,
 	if (Game::init())
 	{
 		// 设置窗口标题和大小
-		Window::setTitle(L"Mine Sweeping");
+		Window::setTitle("Mine Sweeping");
 
 		// 创建场景并进入
 		auto scene = gcnew MainScene;

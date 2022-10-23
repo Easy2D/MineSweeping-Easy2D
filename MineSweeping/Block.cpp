@@ -43,58 +43,58 @@ void Block::reloadImage()
 {
 	if (_state == Block::State::Hidden)
 	{
-		this->open(PNG_HIDDEN, L"PNG");
+		this->open(PNG_HIDDEN, "PNG");
 	}
 	else if (_state == Block::State::Show)
 	{
 		if (!isSafeType())
 		{
-			this->open(PNG_BOOM, L"PNG");
+			this->open(PNG_BOOM, "PNG");
 		}
 		else
 		{
 			switch (getNumber())
 			{
 			case 0:
-				this->open(PNG_0, L"PNG");
+				this->open(PNG_0, "PNG");
 				break;
 			case 1:
-				this->open(PNG_1, L"PNG");
+				this->open(PNG_1, "PNG");
 				break;
 			case 2:
-				this->open(PNG_2, L"PNG");
+				this->open(PNG_2, "PNG");
 				break;
 			case 3:
-				this->open(PNG_3, L"PNG");
+				this->open(PNG_3, "PNG");
 				break;
 			case 4:
-				this->open(PNG_4, L"PNG");
+				this->open(PNG_4, "PNG");
 				break;
 			case 5:
-				this->open(PNG_5, L"PNG");
+				this->open(PNG_5, "PNG");
 				break;
 			case 6:
-				this->open(PNG_6, L"PNG");
+				this->open(PNG_6, "PNG");
 				break;
 			case 7:
-				this->open(PNG_7, L"PNG");
+				this->open(PNG_7, "PNG");
 				break;
 			case 8:
-				this->open(PNG_8, L"PNG");
+				this->open(PNG_8, "PNG");
 				break;
 			}
 		}
 	}
 	else if (_state == Block::State::Suspect)
 	{
-		this->open(PNG_SUSPECT, L"PNG");
+		this->open(PNG_SUSPECT, "PNG");
 	}
 	else if (_state == Block::State::Marked)
 	{
-		this->open(PNG_FLAG, L"PNG");
+		this->open(PNG_FLAG, "PNG");
 	}
 	else if (_state == Block::State::Boom)
 	{
-		this->open(PNG_RED_BOOM, L"PNG");
+		this->open(PNG_RED_BOOM, "PNG");
 	}
 }
